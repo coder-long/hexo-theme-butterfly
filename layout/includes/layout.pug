@@ -13,7 +13,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
     if theme.background
       #web_bg
-      
+
     !=partial('includes/sidebar', {}, {cache: true})
 
     if page.type !== '404'
@@ -44,4 +44,5 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
       include ./404.pug
 
     include ./rightside.pug
+    include ./control_panel.pug
     include ./additional-js.pug
