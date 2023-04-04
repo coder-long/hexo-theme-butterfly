@@ -1,42 +1,38 @@
-#control-panel.control-panel
-  div.control-panel-title
-    span Panel
-  div.panel-back.hide
-      span.back
-        i.iconfont.icon-fanhui
-        span 返回
-  div.control-panel-content
-    div.panel-buttons
-      span(data-class='font-setting') A 字体修改
-      span(data-class='background-setting') B 背景修改
-      span(data-class='background-setting') B 背景修改
-      span(data-class='background-setting') B 背景修改
-    div.panel-hides
-      div.settings.font-setting.hide
-        ul.font-list
-          li.syht(data-font='思源黑体 Regular') 思源黑体
-          li.ceyyt(data-font='仓耳渔阳体 W04') 仓耳渔阳体
-          li.ceyyt(data-font='仓耳渔阳体 W04') 仓耳渔阳体
-          li.ceyyt(data-font='仓耳渔阳体 W04') 仓耳渔阳体
-      div.settings.background-setting.hide
-        ul.background-list
-          li.ceyyt(data-font='background W04') background
-          li.ceyyt(data-font='background W04') background
-          li.ceyyt(data-font='background W04') background
+.bootstrap-iso
+  .modal.fade#staticBackdrop(data-backdrop="static", data-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true")
+    .modal-dialog.modal-lg.modal-dialog-centered.modal-dialog-scrollable
+      .modal-content
+        .modal-header
+          h5.modal-title#staticBackdropLabel Modal title
+          button.close(type="button", data-dismiss="modal", aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body
+          div.row
+            div.col.col-lg-3.col-12.mb-4.mb-lg-0
+              div.nav.flex-lg-column.flex-nowrap.table-responsive-sm.nav-pills#v-pills-tab(role="tablist" aria-orientation="vertical" style={gap:'5px'})
+                button.btn.nav-link.text-nowrap.active#v-pills-theme-tab(data-toggle="pill" data-target="#v-pills-theme" type="button" role="tab" aria-controls="v-pills-theme" aria-selected="true") 主题配置
+                button.btn.nav-link.text-nowrap#v-pills-font-tab(data-toggle="pill" data-target="#v-pills-font" type="button" role="tab" aria-controls="v-pills-font" aria-selected="false") 字体配置
+                button.btn.nav-link.text-nowrap#v-pills-messages-tab(data-toggle="pill" data-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false") Messages
+                button.btn.nav-link.text-nowrap#v-pills-settings-tab(data-toggle="pill" data-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false") Settings
+            div.col.col-lg-9.col-12
+              div.tab-content#v-pills-tabContent
+                div.tab-pane.fade.show.active#v-pills-theme(role="tabpanel" aria-labelledby="v-pills-theme-tab") ...1
+                div.tab-pane.fade#v-pills-font(role="tabpanel" aria-labelledby="v-pills-font-tab")
+                  ul.row.font-list.text-nowrap
+                    li.col.col-6.col-md-4.syst.active(data-font='思源宋体 Regular')
+                      button.btn.btn-outline-info(style="font-family:'思源宋体 Regular'") 思源宋体
+                    li.col.col-6.col-md-4.syht(data-font='思源黑体 Regular')
+                      button.btn.btn-outline-info(style="font-family:'思源黑体 Regular'") 思源黑体
+                    li.col.col-6.col-md-4.ceyyt(data-font='仓耳渔阳体 W04')
+                      button.btn.btn-outline-info(style="font-family:'仓耳渔阳体 W04'") 仓耳渔阳体
+                    li.col.col-6.col-md-4.dfdk(data-font='东方大楷 Regular')
+                      button.btn.btn-outline-info(style="font-family:'东方大楷 Regular'") 东方大楷
+                div.tab-pane.fade#v-pills-messages(role="tabpanel" aria-labelledby="v-pills-messages-tab") ...3
+                div.tab-pane.fade#v-pills-settings(role="tabpanel" aria-labelledby="v-pills-settings-tab") ...4
 
-  div.control-panel-footer
+        .modal-footer
+          //- button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+          button.btn.btn-primary(type="button") Understood
 
 
 
-//- #global-modal
-//-   button.btn.btn-primary(type='button',data-bs-toggle="modal",data-bs-target="#settingModal") settingModal
-//-   div#settingModal.modal.fade(tabindex="-1",aria-labelledby="settingModal",aria-hidden="true")
-//-     div.modal-dialog
-//-       div.modal-content
-//-         div.modal-header
-//-           h1.modal-title.fs-5 Modal title
-//-           button.btn-close(type='button', data-bs-dismiss="modal",aria-label="Close")
-//-         div.modal-body bbb
-//-         div.modal-footer
-//-           button.btn.btn-secondary(type='button', data-bs-dismiss="modal")
-//-           button.btn.btn-primary

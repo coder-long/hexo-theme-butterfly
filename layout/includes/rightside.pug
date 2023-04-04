@@ -35,7 +35,7 @@ mixin rightsideItem(array)
   - const hideArray = enable ? hide && hide.split(',') : ['readmode','translate','darkmode','hideAside']
   - const showArray = enable ? show && show.split(',') : ['toc','chat','comment']
 
-  
+
   #rightside-config-hide
     if hideArray
       +rightsideItem(hideArray)
@@ -59,3 +59,5 @@ mixin rightsideItem(array)
     button#go-up(type="button" title=_p("rightside.back_to_top"))
       span.scroll-percent
       i.fas.fa-arrow-up
+    button#control-panel(type="button",title='控制面板',data-toggle="modal", data-target="#staticBackdrop")
+      i.fas.fa-cog.fa-spin
