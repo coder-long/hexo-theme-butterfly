@@ -1,7 +1,7 @@
 if site.data.widget && site.data.widget.top
   each item in site.data.widget.top
     .card-widget(class=item.class_name id=item.id_name)
-      .item-headline
+      .item-headline(class=item.class_name_show)
         i(class=item.icon)
         span=item.name
       .item-content
